@@ -9,7 +9,11 @@ CLASS zcl_170422031_230226 DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-CLASS zcl_170422031_230226 IMPLEMENTATION.
+
+
+CLASS ZCL_170422031_230226 IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     out->write( 'Hello world!' ).
     "Data Declarations - Variables
@@ -152,5 +156,3 @@ out->write( lt_attendance ).
 
   ENDMETHOD.
 ENDCLASS.
-
-

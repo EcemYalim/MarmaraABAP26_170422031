@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_170422031_using_cnt_str_01 IMPLEMENTATION.
+CLASS ZCL_170422031_USING_CNT_STR_01 IMPLEMENTATION.
+
+
     METHOD if_oo_adt_classrun~main.
 
 * Declarations

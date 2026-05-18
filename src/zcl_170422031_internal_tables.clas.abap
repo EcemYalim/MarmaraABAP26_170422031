@@ -12,7 +12,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_170422031_internal_tables IMPLEMENTATION.
+CLASS ZCL_170422031_INTERNAL_TABLES IMPLEMENTATION.
+
+
  METHOD if_oo_adt_classrun~main.
 
 * Declarations
@@ -95,5 +97,4 @@ CLASS zcl_170422031_internal_tables IMPLEMENTATION.
     ENDLOOP.
 
  ENDMETHOD.
-
 ENDCLASS.

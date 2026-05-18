@@ -20,7 +20,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_170422031_select_table IMPLEMENTATION.
+CLASS ZCL_170422031_SELECT_TABLE IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -50,6 +50,7 @@ CLASS zcl_170422031_select_table IMPLEMENTATION.
 * DATA
 
   ENDMETHOD.
+
 
   METHOD get_results_from_table.
 

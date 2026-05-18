@@ -21,7 +21,21 @@ ENDCLASS.
 
 
 
-CLASS zcl_170422031_select_cds IMPLEMENTATION.
+CLASS ZCL_170422031_SELECT_CDS IMPLEMENTATION.
+
+
+  METHOD get_results_from_cds.
+
+    SELECT SINGLE FROM /dmo/I_Connection
+        FIELDS DepartureAirport ,DestinationAirport, \_Airline-Name
+        WHERE AirlineID = @carrier_id AND ConnectionID = @connection_id
+        INTO ( @airport_from_id, @airport_to_id, @carrier_name ).
+
+    IF sy-subrc <> 0.
+      RAISE EXCEPTION TYPE cx_abap_invalid_value.
+    ENDIF.
+
+  ENDMETHOD.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -51,19 +65,6 @@ CLASS zcl_170422031_select_cds IMPLEMENTATION.
 
 
 * DATA
-
-  ENDMETHOD.
-
-  METHOD get_results_from_cds.
-
-    SELECT SINGLE FROM /dmo/I_Connection
-        FIELDS DepartureAirport ,DestinationAirport, \_Airline-Name
-        WHERE AirlineID = @carrier_id AND ConnectionID = @connection_id
-        INTO ( @airport_from_id, @airport_to_id, @carrier_name ).
-
-    IF sy-subrc <> 0.
-      RAISE EXCEPTION TYPE cx_abap_invalid_value.
-    ENDIF.
 
   ENDMETHOD.
 ENDCLASS.
